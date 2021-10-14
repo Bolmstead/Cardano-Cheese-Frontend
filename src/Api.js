@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// const BASE_URL = "https://rocks-backend.herokuapp.com"
+// const BASE_URL = "https://cardano-cheese-backend.herokuapp.com"
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 /** API Class.
@@ -13,6 +13,7 @@ class API {
     console.debug("API Call:", endpoint, method);
 
     const url = `${BASE_URL}/${endpoint}`;
+    console.log("🚀 ~ file: Api.js ~ line 16 ~ API ~ request ~ url", url)
 
 
     try {

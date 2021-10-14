@@ -29,21 +29,21 @@ export default function Bar() {
         <Toolbar>
           <a href="/">
             <Avatar
-              src="/rock.png"
+              src="/cheese.png"
               sx={{ width: 75, height: 75, marginTop: "15px" }}
               alt="image"
             />
           </a>
           <Typography sx={{ flexGrow: 1 }}></Typography>
 
-          <a href="https://discord.gg/ze6fu38K" className="twitter-link">
+          {/* <a href="https://discord.gg/ze6fu38K" className="twitter-link">
             <Avatar
               src="discord.png"
               sx={{ marginRight: "30px", width: 40, height: 40 }}
               alt="image"
             />
-          </a>
-          <a href="https://twitter.com/CardanoRocksNFT" className="twitter-link">
+          </a> */}
+          <a href="https://twitter.com/Cardano_Cheese" className="twitter-link">
             <TwitterIcon fontSize="large"/>
           </a>
 

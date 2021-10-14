@@ -27,7 +27,7 @@ export default function MainPage() {
           nftComponents.push(
             <Grid item key={item.id}>
               <Box>
-                <Card variant="outlined">
+                <Card variant="outlined" style={{ backgroundColor: "#F2F2F2" }}>
                   <CardContent>
                     <img
                       src={item.gatewayLink}
@@ -75,11 +75,11 @@ export default function MainPage() {
             }}
             color="black"
           >
-            Cardano Rocks{" "}
+            Cardano Cheese{" "}
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <img style={{ width: "300px" }} src="rockgif.gif" alt="rockgif" />
+          <img style={{ width: "300px" }} src="cheese.png" alt="rockgif" />
         </Grid>
         <Grid item xs={12}>
           <Typography
@@ -92,9 +92,9 @@ export default function MainPage() {
             color="black"
             gutterBottom
           >
-            100 Virtual Rock NFTs on the Cardano blockchain
+            100 Virtual Cheese NFTs on the Cardano blockchain
           </Typography>
-          <Typography
+          {/* <Typography
             style={{
               fontSize: 20,
               color: "#24251D",
@@ -112,7 +112,7 @@ export default function MainPage() {
               Twitter
             </a>{" "}
             for upcoming announcements!
-          </Typography>
+          </Typography> */}
           <Typography
             style={{
               fontSize: 20,
@@ -122,28 +122,19 @@ export default function MainPage() {
             color="black"
             gutterBottom
           >
-            Mint Date: October 14th @ 11:00PM UTC
+            Mint Date: TBD
           </Typography>
           <Typography
             style={{
               fontSize: 16,
               color: "gray",
               fontWeight: "bold",
+              marginBottom: "30px",
+
             }}
             gutterBottom
           >
-            Policy ID: 0d832a143bd7a5e0d315af25c3879707a2ffd089dad0d370ec4977a2
-          </Typography>
-          <Typography
-            style={{
-              fontSize: 16,
-              color: "gray",
-              fontWeight: "bold",
-              marginBottom: "100px",
-            }}
-            gutterBottom
-          >
-            (On-site trading coming soon!)
+            Policy ID: e22927ac8a20ca5b8897aa02efdaf27ade0272de8c8b441d3dea0401
           </Typography>
         </Grid>
         <Grid item xs={12}>
