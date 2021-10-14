@@ -3,45 +3,50 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
+import {  makeStyles } from "@material-ui/core/styles";
+import Avatar from "@mui/material/Avatar";
+import TwitterIcon from "@mui/icons-material/Twitter";
+
+const useStyles = makeStyles((theme) => ({
+  logo: {
+    maxWidth: "150px",
+    minWidth: "80px",
+    border: "solid",
+  },
+  barLogoContainer: {
+    maxWidth: "150px",
+    minWidth: "80px",
+    border: "solid",
+  },
+}));
 
 export default function Bar() {
+  const classes = useStyles();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          >
-            <FastfoodIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          ></Typography>
-          <Button
-            color="inherit"
-            disableRipple={true}
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            Login
-          </Button>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ display: { xs: "block", sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <a href="/">
+            <Avatar
+              src="/rock.png"
+              sx={{ width: 75, height: 75, marginTop: "15px" }}
+              alt="image"
+            />
+          </a>
+          <Typography sx={{ flexGrow: 1 }}></Typography>
+
+          <a href="https://discord.gg/ze6fu38K" className="twitter-link">
+            <Avatar
+              src="discord.png"
+              sx={{ marginRight: "30px", width: 40, height: 40 }}
+              alt="image"
+            />
+          </a>
+          <a href="https://twitter.com/CardanoRocksNFT" className="twitter-link">
+            <TwitterIcon fontSize="large"/>
+          </a>
+
         </Toolbar>
       </AppBar>
     </Box>

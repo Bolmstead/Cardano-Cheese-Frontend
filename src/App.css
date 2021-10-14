@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.bar-logo-container {
+  width: 200px
+}
+.bar-logo {
+  width: auto;
+  height: 200px
+}
+
+.twitter-link {
+  color: black
+}
+
+.link{
+  
+}

@@ -1,17 +1,20 @@
-import './App.css';
-import Bar from './Components/Bar'
-import MainPage from './Pages/MainPage'
+import "./App.css";
+import Bar from "./Components/Bar";
+import Routes from "./Routes.js";
+import { BrowserRouter, Switch } from "react-router-dom";
 
-import { Container } from '@mui/material';
-
+import { Container } from "@mui/material";
 
 function App() {
-  console.log("process.env", process.env)
   return (
-    <Container maxWidth="lg" className="App">
-      <Bar/>
-      <MainPage/>
-    </Container>
+    <BrowserRouter>
+      <Container maxWidth="xl" className="App">
+        <Bar />
+        <Switch>
+          <Routes />
+        </Switch>
+      </Container>
+    </BrowserRouter>
   );
 }
 
