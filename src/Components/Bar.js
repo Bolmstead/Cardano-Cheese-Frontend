@@ -29,7 +29,7 @@ export default function Bar() {
         <Toolbar>
           <a href="/">
             <Avatar
-              src="/cheese.png"
+              src="/originalCheese.png"
               sx={{ width: 75, height: 75, marginTop: "15px" }}
               alt="image"
             />

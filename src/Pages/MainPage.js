@@ -65,21 +65,12 @@ export default function MainPage() {
     >
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <Typography
-            style={{
-              fontSize: 80,
-              color: "#24251D",
-              marginBottom: "20px",
-              fontWeight: "bold",
-              marginBottom: "40px",
-            }}
-            color="black"
-          >
-            Cardano Cheese{" "}
-          </Typography>
+        <img style={{ maxWidth: "700px", marginTop: "50px" }} src="half1.jpeg" alt="cheese" />
+        <img style={{ maxWidth: "500px", marginBottom: "20px"}} src="half2.jpeg" alt="cheese" />
+
         </Grid>
         <Grid item xs={12}>
-          <img style={{ width: "300px" }} src="cheese.png" alt="rockgif" />
+          <img style={{ width: "250px" }} src="cheeseGif.gif" alt="cheese" />
         </Grid>
         <Grid item xs={12}>
           <Typography
@@ -87,7 +78,7 @@ export default function MainPage() {
               fontSize: 20,
               color: "#24251D",
               fontWeight: "bold",
-              marginTop: "50px",
+              marginTop: "20px",
             }}
             color="black"
             gutterBottom
@@ -129,7 +120,7 @@ export default function MainPage() {
               fontSize: 16,
               color: "gray",
               fontWeight: "bold",
-              marginBottom: "30px",
+              marginBottom: "60px",
 
             }}
             gutterBottom
