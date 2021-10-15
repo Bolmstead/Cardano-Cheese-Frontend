@@ -70,7 +70,7 @@ export default function MainPage() {
 
         </Grid>
         <Grid item xs={12}>
-          <img style={{ width: "250px" }} src="cheeseGif.gif" alt="cheese" />
+          <img style={{ width: "220px" }} src="cheeseGif.gif" alt="cheese" />
         </Grid>
         <Grid item xs={12}>
           <Typography
@@ -120,7 +120,7 @@ export default function MainPage() {
               fontSize: 16,
               color: "gray",
               fontWeight: "bold",
-              marginBottom: "60px",
+              marginBottom: "80px",
 
             }}
             gutterBottom
