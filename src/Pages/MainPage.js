@@ -106,17 +106,6 @@ export default function MainPage() {
           </Typography> */}
           <Typography
             style={{
-              fontSize: 20,
-              color: "#24251D",
-              fontWeight: "bold",
-            }}
-            color="black"
-            gutterBottom
-          >
-            Mint Date: TBD
-          </Typography>
-          <Typography
-            style={{
               fontSize: 16,
               color: "gray",
               fontWeight: "bold",

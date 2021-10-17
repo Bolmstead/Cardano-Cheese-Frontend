@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// const BASE_URL = "https://cardano-cheese-backend.herokuapp.com"
+// const BASE_URL = "http://localhost:3000"
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 /** API Class.
@@ -45,6 +45,16 @@ class API {
 
   static async getAddressForSpecificNftSale(nftId) {
     let res = await this.request(`GetAddressForSpecificNftSale/${nftId}`);
+
+    if (res) {
+      return res.data;
+    } else {
+      return "error"
+    }
+  }
+
+  static async GetAddressForRandomNftSale(nftId) {
+    let res = await this.request(`GetAddressForRandomNftSale/${nftId}`);
 
     if (res) {
       return res.data;

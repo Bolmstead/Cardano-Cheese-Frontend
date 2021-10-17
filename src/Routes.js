@@ -2,7 +2,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react";
 
 import MainPage from "./Pages/MainPage";
-import MintPage from "./Pages/MintPage";
 
 import NotFound from "./Pages/NotFound";
 
@@ -14,9 +13,7 @@ function Routes() {
       <Route exact path="/">
         <MainPage />
       </Route>
-      <Route exact path="/mint_a_rock/:hash">
-        <MintPage />
-      </Route>
+
       <Route>
         <NotFound />
       </Route>
