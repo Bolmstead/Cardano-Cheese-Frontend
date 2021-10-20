@@ -11,7 +11,7 @@ import Chip from "@mui/material/Chip";
 
 export default function MainPage() {
   const [allNFTs, setAllNFTs] = useState(0);
-  const [cheeseLeft, setCheeseLeft] = useState(0);
+  const [cheeseLeft, setCheeseLeft] = useState(null);
 
   useEffect(() => {
     async function grabAllNFTs() {
@@ -27,7 +27,19 @@ export default function MainPage() {
           counter++;
         }
       }
-      setCheeseLeft(counter);
+
+      setCheeseLeft(
+        <Typography
+          style={{
+            fontSize: 20,
+            color: "red",
+            fontWeight: "bold",
+          }}
+          gutterBottom
+        >
+          <strong>{counter}</strong>{" "}Cardano Cheese left to mint!
+        </Typography>
+      );
 
       let nftComponents = [];
 
@@ -170,16 +182,7 @@ export default function MainPage() {
               Cardano Rock NFT{" "}
             </a>
           </Typography>
-          <Typography
-            style={{
-              fontSize: 20,
-              color: "red",
-              fontWeight: "bold",
-            }}
-            gutterBottom
-          >
-            <strong>{cheeseLeft} </strong>Cardano Cheese left to mint!
-          </Typography>
+          {cheeseLeft}
 
           <Typography
             style={{

@@ -13,7 +13,6 @@ class API {
     console.debug("API Call:", endpoint, method);
 
     const url = `${BASE_URL}/${endpoint}`;
-    console.log("🚀 ~ file: Api.js ~ line 16 ~ API ~ request ~ url", url)
 
 
     try {
