@@ -7,16 +7,27 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
 import API from "../Api";
-import Chip from '@mui/material/Chip';
-
+import Chip from "@mui/material/Chip";
 
 export default function MainPage() {
   const [allNFTs, setAllNFTs] = useState(0);
+  const [cheeseLeft, setCheeseLeft] = useState(0);
 
   useEffect(() => {
     async function grabAllNFTs() {
       const result = await API.getNfts();
-      console.log("🚀 ~ file: MainPage.js ~ line 17 ~ grabAllNFTs ~ result", result)
+      console.log(
+        "🚀 ~ file: MainPage.js ~ line 17 ~ grabAllNFTs ~ result",
+        result
+      );
+
+      let counter = 0;
+      for (let cheese of result) {
+        if (cheese.state === "free") {
+          counter++;
+        }
+      }
+      setCheeseLeft(counter);
 
       let nftComponents = [];
 
@@ -43,7 +54,11 @@ export default function MainPage() {
                     >
                       {item.name}
                     </Typography>
-                    {item.minted ? <Chip label="Minted" color="success" size="small"/> : <Chip label="Not Minted" color="primary" size="small"/>}
+                    {item.minted ? (
+                      <Chip label="Minted" color="success" size="small" />
+                    ) : (
+                      <Chip label="Not Minted" color="primary" size="small" />
+                    )}
                   </CardContent>
                 </Card>{" "}
               </Box>
@@ -64,10 +79,47 @@ export default function MainPage() {
       justify="center"
     >
       <Grid container spacing={0}>
-        <Grid item xs={12}>
-        <img style={{ maxWidth: "700px", marginTop: "50px" }} src="half1.jpeg" alt="cheese" />
-        <img style={{ maxWidth: "500px", marginBottom: "20px"}} src="half2.jpeg" alt="cheese" />
-
+        <Grid item xs={12} sx={{ display: { lg: "block", xs: "none" } }}>
+          <img
+            style={{ maxWidth: "800px", marginTop: "50px" }}
+            src="half1.jpeg"
+            alt="cheese"
+          />
+          <img
+            style={{ maxWidth: "590px", marginBottom: "20px" }}
+            src="half2.jpeg"
+            alt="cheese"
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{ display: { lg: "none", md: "block", xs: "none" } }}
+        >
+          <img
+            style={{ maxWidth: "600px", marginTop: "50px" }}
+            src="half1.jpeg"
+            alt="cheese"
+          />
+          <br />
+          <img
+            style={{ maxWidth: "450px", marginBottom: "20px" }}
+            src="half2.jpeg"
+            alt="cheese"
+          />
+        </Grid>
+        <Grid item xs={12} sx={{ display: { md: "none", xs: "block" } }}>
+          <img
+            style={{ maxWidth: "400px", marginTop: "50px" }}
+            src="half1.jpeg"
+            alt="cheese"
+          />
+          <br />
+          <img
+            style={{ maxWidth: "300px", marginBottom: "20px" }}
+            src="half2.jpeg"
+            alt="cheese"
+          />
         </Grid>
         <Grid item xs={12}>
           <img style={{ width: "220px" }} src="cheeseGif.gif" alt="cheese" />
@@ -106,11 +158,35 @@ export default function MainPage() {
           </Typography> */}
           <Typography
             style={{
+              fontSize: 20,
+              color: "#24251D",
+              fontWeight: "bold",
+            }}
+            gutterBottom
+          >
+            Public Mint date is 11/6, however you can mint a cheese now if you
+            own a qualifying{" "}
+            <a href="www.cardanoRocksNFT.com" className="link">
+              Cardano Rock NFT{" "}
+            </a>
+          </Typography>
+          <Typography
+            style={{
+              fontSize: 20,
+              color: "red",
+              fontWeight: "bold",
+            }}
+            gutterBottom
+          >
+            <strong>{cheeseLeft} </strong>Cardano Cheese left to mint!
+          </Typography>
+
+          <Typography
+            style={{
               fontSize: 16,
               color: "gray",
               fontWeight: "bold",
               marginBottom: "80px",
-
             }}
             gutterBottom
           >

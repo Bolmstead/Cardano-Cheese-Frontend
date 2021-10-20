@@ -36,13 +36,13 @@ export default function Bar() {
           </a>
           <Typography sx={{ flexGrow: 1 }}></Typography>
 
-          {/* <a href="https://discord.gg/ze6fu38K" className="twitter-link">
+          <a href="https://discord.gg/sU49UXy5" className="twitter-link">
             <Avatar
               src="discord.png"
               sx={{ marginRight: "30px", width: 40, height: 40 }}
               alt="image"
             />
-          </a> */}
+          </a>
           <a href="https://twitter.com/Cardano_Cheese" className="twitter-link">
             <TwitterIcon fontSize="large"/>
           </a>
