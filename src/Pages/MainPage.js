@@ -28,6 +28,7 @@ export default function MainPage() {
         }
       }
 
+
       setCheeseLeft(
         <Typography
           style={{
@@ -176,7 +177,7 @@ export default function MainPage() {
             }}
             gutterBottom
           >
-            Public Mint date is 11/6, however you can mint a cheese now if you
+            Public Mint date is 10/22 at 4pm UTC, however you can mint a cheese now if you
             own a qualifying{" "}
             <a href="www.cardanoRocksNFT.com" className="link">
               Cardano Rock NFT{" "}
