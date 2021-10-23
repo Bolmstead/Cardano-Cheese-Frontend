@@ -53,7 +53,7 @@ class API {
   }
 
   static async GetAddressForRandomNftSale(nftId) {
-    let res = await this.request(`GetAddressForRandomNftSale/${nftId}`);
+    let res = await this.request(`GetAddressForRandomNftSale`);
 
     if (res) {
       return res.data;
