@@ -18,6 +18,7 @@ export default function MintPage() {
   async function getAddress() {
 
     let result = await API.GetAddressForRandomNftSale();
+    console.log("resutl", result)
     if (result === "error") {
       setShowError(true);
       return;
@@ -130,17 +131,20 @@ export default function MintPage() {
               }}
             >
               Once the ADA is sent, a random Cardano Cheese NFT will be sent to
-              your wallet.
+              your wallet.           <br/>   Please be patient, as it can take some time to receive the NFT
+
             </Typography>{" "}
             <Typography
               style={{
                 fontSize: 16,
                 color: "black",
                 fontWeight: "bold",
+                marginTop: "30px",
               }}
             >
-              Please be patient, as it can take some time to receive the NFT :)
+              Keep an eye on our Twitter. It is likely not all addresses generated will be used to mint a cheese. <br/>If this is the case, we will tweet when you can try to mint any leftover cheese!
             </Typography>{" "}
+
           </Grid>
           <Grid item xs={12}>
             <Typography
