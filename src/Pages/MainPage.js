@@ -23,11 +23,12 @@ export default function MainPage() {
 
       let counter = 0;
       for (let cheese of result) {
-        if (cheese.state === "free") {
+        if (cheese.state === "free" || cheese.state === "reserved") {
           counter++;
         }
       }
 
+      result.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
       setCheeseLeft(
         <Typography
@@ -38,7 +39,7 @@ export default function MainPage() {
           }}
           gutterBottom
         >
-          <strong>{counter}</strong>{" "}Cardano Cheese left to mint!
+          <strong>{counter}</strong> Cardano Cheese left!
         </Typography>
       );
 
@@ -177,13 +178,17 @@ export default function MainPage() {
             }}
             gutterBottom
           >
-            Public Mint date is 10/22 at 4pm UTC
-            <a href="www.cardanoRocksNFT.com" className="link">
-              Cardano Rock NFT{" "}
-            </a>
+            <Button
+              href="/its_that_time_lets_mint_some_cheeeeeeeeeeeese"
+              className=""
+              variant="contained"
+              color="success"
+              style={{textTransform: "none", color: "black", backgroundColor: "#FDDE09", padding: "10px 40px"}}
+            >
+              <strong>Mint a Cheese!</strong>
+            </Button>
           </Typography>
           {cheeseLeft}
-
           <Typography
             style={{
               fontSize: 16,
