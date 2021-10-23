@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react";
 
 import MainPage from "./Pages/MainPage";
+import MintPage from "./Pages/MintPage";
 
 import NotFound from "./Pages/NotFound";
 
@@ -12,6 +13,9 @@ function Routes() {
     <Switch>
       <Route exact path="/">
         <MainPage />
+      </Route>
+      <Route exact path="/its_that_time_lets_mint_some_cheeeeeeeeeeeese">
+        <MintPage />
       </Route>
 
       <Route>
