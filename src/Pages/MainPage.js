@@ -151,7 +151,7 @@ export default function MainPage() {
           >
             100 Virtual Cheese NFTs on the Cardano blockchain
           </Typography>
-          {/* <Typography
+          <Typography
             style={{
               fontSize: 20,
               color: "#24251D",
@@ -161,7 +161,7 @@ export default function MainPage() {
             gutterBottom
           >
             Check out our{" "}
-            <a href="https://discord.gg/ze6fu38K" className="link">
+            <a href="https://discord.gg/fjJkx26RhA" className="link">
               Discord
             </a>{" "}
             and{" "}
@@ -169,7 +169,7 @@ export default function MainPage() {
               Twitter
             </a>{" "}
             for upcoming announcements!
-          </Typography> */}
+          </Typography>
           <Typography
             style={{
               fontSize: 20,
