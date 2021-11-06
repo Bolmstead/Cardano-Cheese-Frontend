@@ -28,7 +28,7 @@ export default function MainPage() {
         }
       }
 
-      result.sort((a, b) => (a.name > b.name) ? 1 : -1)
+      result.sort((a, b) => (a.name > b.name ? 1 : -1));
 
       setCheeseLeft(
         <Typography
@@ -124,13 +124,13 @@ export default function MainPage() {
         </Grid>
         <Grid item xs={12} sx={{ display: { md: "none", xs: "block" } }}>
           <img
-            style={{ maxWidth: "400px", marginTop: "50px" }}
+            style={{ maxWidth: "350px", marginTop: "50px" }}
             src="half1.jpeg"
             alt="cheese"
           />
           <br />
           <img
-            style={{ maxWidth: "300px", marginBottom: "20px" }}
+            style={{ maxWidth: "225px", marginBottom: "20px" }}
             src="half2.jpeg"
             alt="cheese"
           />
@@ -183,7 +183,12 @@ export default function MainPage() {
               className=""
               variant="contained"
               color="success"
-              style={{textTransform: "none", color: "black", backgroundColor: "#FDDE09", padding: "10px 40px"}}
+              style={{
+                textTransform: "none",
+                color: "black",
+                backgroundColor: "#FDDE09",
+                padding: "10px 40px",
+              }}
             >
               <strong>Mint a Cheese!</strong>
             </Button>
