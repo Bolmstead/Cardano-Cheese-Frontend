@@ -14,9 +14,6 @@ function Routes() {
       <Route exact path="/">
         <MainPage />
       </Route>
-      <Route exact path="/its_that_time_lets_mint_some_cheeeeeeeeeeeese">
-        <MintPage />
-      </Route>
 
       <Route>
         <NotFound />

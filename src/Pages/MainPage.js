@@ -170,29 +170,6 @@ export default function MainPage() {
             </a>{" "}
             for upcoming announcements!
           </Typography>
-          <Typography
-            style={{
-              fontSize: 20,
-              color: "#24251D",
-              fontWeight: "bold",
-            }}
-            gutterBottom
-          >
-            <Button
-              href="/its_that_time_lets_mint_some_cheeeeeeeeeeeese"
-              className=""
-              variant="contained"
-              color="success"
-              style={{
-                textTransform: "none",
-                color: "black",
-                backgroundColor: "#FDDE09",
-                padding: "10px 40px",
-              }}
-            >
-              <strong>Mint a Cheese!</strong>
-            </Button>
-          </Typography>
           {cheeseLeft}
           <Typography
             style={{
