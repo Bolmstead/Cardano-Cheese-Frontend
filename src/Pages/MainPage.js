@@ -11,7 +11,6 @@ import Chip from "@mui/material/Chip";
 
 export default function MainPage() {
   const [allNFTs, setAllNFTs] = useState(0);
-  const [cheeseLeft, setCheeseLeft] = useState(null);
 
   useEffect(() => {
     async function grabAllNFTs() {
@@ -29,19 +28,6 @@ export default function MainPage() {
       }
 
       result.sort((a, b) => (a.name > b.name ? 1 : -1));
-
-      setCheeseLeft(
-        <Typography
-          style={{
-            fontSize: 20,
-            color: "red",
-            fontWeight: "bold",
-          }}
-          gutterBottom
-        >
-          <strong>{counter}</strong> Cardano Cheese left!
-        </Typography>
-      );
 
       let nftComponents = [];
 
@@ -149,28 +135,35 @@ export default function MainPage() {
             color="black"
             gutterBottom
           >
-            100 Virtual Cheese NFTs on the Cardano blockchain
+            100 Virtual Cheese NFTs on the Cardano blockchain!
           </Typography>
+
           <Typography
             style={{
               fontSize: 20,
               color: "#24251D",
               fontWeight: "bold",
             }}
-            color="black"
             gutterBottom
           >
-            Check out our{" "}
-            <a href="https://discord.gg/fjJkx26RhA" className="link">
-              Discord
+            All cheeses have been minted, but you can buy them on{" "}
+            <a href="https://cnft.io/marketplace?project=Cardano%20Cheese" className="link">
+              CNFT.io{" "}
             </a>{" "}
-            and{" "}
-            <a href="https://twitter.com/CardanoRocksNFT" className="link">
-              Twitter
-            </a>{" "}
-            for upcoming announcements!
-          </Typography>
-          {cheeseLeft}
+          </Typography>{" "}
+          <Typography
+            style={{
+              fontSize: 20,
+              color: "#24251D",
+              fontWeight: "bold",
+            }}
+            gutterBottom
+          >
+            Check out our latest sales and other data {" "}
+            <a href="https://opencnft.io/BV6pEJykjQi9RX34xRjjH9xdE" className="link">
+              here
+            </a>
+          </Typography>{" "}
           <Typography
             style={{
               fontSize: 16,
