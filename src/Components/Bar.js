@@ -1,11 +1,11 @@
-import * as React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import AppBar from "@mui/material/AppBar";
+import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import {  makeStyles } from "@material-ui/core/styles";
-import Avatar from "@mui/material/Avatar";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import * as React from "react";
 
 const useStyles = makeStyles((theme) => ({
   logo: {
@@ -36,10 +36,16 @@ export default function Bar() {
           </a>
           <Typography sx={{ flexGrow: 1 }}></Typography>
 
-          <a href="https://twitter.com/EtherCheeseNFT" className="twitter-link">
-            <TwitterIcon fontSize="large"/>
+          <a href="https://discord.gg/fjJkx26RhA" className="twitter-link">
+            <Avatar
+              src="discord.png"
+              sx={{ marginRight: "30px", width: 40, height: 40 }}
+              alt="image"
+            />
           </a>
-
+          <a href="https://twitter.com/Cardano_Cheese" className="twitter-link">
+            <TwitterIcon fontSize="large" />
+          </a>
         </Toolbar>
       </AppBar>
     </Box>
