@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Container } from "@mui/material";
-import API from "../Api";
 import Chip from "@mui/material/Chip";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import React, { useEffect, useState } from "react";
+import API from "../Api";
 
 export default function MainPage() {
   const [allNFTs, setAllNFTs] = useState(0);
@@ -80,16 +79,18 @@ export default function MainPage() {
     >
       <Grid container spacing={0}>
         <Grid item xs={12} sx={{ display: { lg: "block", xs: "none" } }}>
-          <img
-            style={{ maxWidth: "800px", marginTop: "50px" }}
-            src="half1.jpeg"
-            alt="cheese"
-          />
-          <img
-            style={{ maxWidth: "590px", marginBottom: "20px" }}
-            src="half2.jpeg"
-            alt="cheese"
-          />
+          <Typography
+            style={{
+              color: "black",
+              fontWeight: "bold",
+              textDecoration: "none",
+              fontSize: "100px",
+              marginTop: "100px",
+              marginBottom: "20px",
+            }}
+          >
+            Ether Cheese
+          </Typography>
         </Grid>
         <Grid
           item
@@ -110,13 +111,13 @@ export default function MainPage() {
         </Grid>
         <Grid item xs={12} sx={{ display: { md: "none", xs: "block" } }}>
           <img
-            style={{ maxWidth: "350px", marginTop: "50px" }}
+            style={{ maxWidth: "400px", marginTop: "50px" }}
             src="half1.jpeg"
             alt="cheese"
           />
           <br />
           <img
-            style={{ maxWidth: "225px", marginBottom: "20px" }}
+            style={{ maxWidth: "300px", marginBottom: "20px" }}
             src="half2.jpeg"
             alt="cheese"
           />
@@ -128,17 +129,16 @@ export default function MainPage() {
           <Typography
             style={{
               fontSize: 20,
-              color: "#24251D",
+              color: "gray",
               fontWeight: "bold",
-              marginTop: "20px",
+              marginTop: "70px",
             }}
             color="black"
             gutterBottom
           >
-            100 Virtual Cheese NFTs on the Cardano blockchain!
+            No roadmap. Just 100 Cheese NFTs.
           </Typography>
-
-          <Typography
+          {/* <Typography
             style={{
               fontSize: 20,
               color: "#24251D",
@@ -147,7 +147,10 @@ export default function MainPage() {
             gutterBottom
           >
             All cheeses have been minted, but you can buy them on{" "}
-            <a href="https://cnft.io/marketplace?project=Cardano%20Cheese" className="link">
+            <a
+              href="https://cnft.io/marketplace?project=Cardano%20Cheese"
+              className="link"
+            >
               CNFT.io{" "}
             </a>{" "}
           </Typography>{" "}
@@ -159,8 +162,11 @@ export default function MainPage() {
             }}
             gutterBottom
           >
-            Check out our latest sales and other data {" "}
-            <a href="https://opencnft.io/BV6pEJykjQi9RX34xRjjH9xdE" className="link">
+            Check out our latest sales and other data{" "}
+            <a
+              href="https://opencnft.io/BV6pEJykjQi9RX34xRjjH9xdE"
+              className="link"
+            >
               here
             </a>
           </Typography>{" "}
@@ -174,7 +180,7 @@ export default function MainPage() {
             gutterBottom
           >
             Policy ID: e22927ac8a20ca5b8897aa02efdaf27ade0272de8c8b441d3dea0401
-          </Typography>
+          </Typography> */}
         </Grid>
         <Grid item xs={12}>
           <Grid container spacing={3} justifyContent="center">
